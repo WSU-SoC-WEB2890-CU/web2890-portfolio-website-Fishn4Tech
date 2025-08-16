@@ -1,3 +1,79 @@
-/* Your styles go here */
+$primary: #1fb6d4;
+$secondary: #ffa69e;
+$success: #0e739b;
+$warning: #ff402f;
+$danger: #5a606b;
+$info: #fbf1ec;
+$dark: #344055;
+$light: white;
+
+:root {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Montserrat", "Karla", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+
+  h1 {
+    font-family: var(--font-serif);
+  }
+  h2 {
+    font-family: var(--font-montserrat);
+  }
+}
+
+.landing-title {
+  font-family: "Playfair Display", serif;
+  font-weight: bolder;
+  text-shadow: 1px 1px 0 $dark, -1px -1px 2px $light, 1px -1px 0 $light, -1px 1px 2px $dark;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.navbar {
+  height: 10vh;
+}
+/* Base navbar links */
+.navbar .nav-link {
+  color: #fff;
+  border-radius: 2rem; /* pill shape */
+  padding: 0.5rem 1rem; /* spacing for pill */
+  font-weight: 500; /* normal weight */
+  transition: all 0.3s ease; /* smooth hover and scale */
+  text-decoration: none;
+}
+
+/* Hover effect for nav links */
+.navbar .nav-link:hover {
+  background-color: $secondary; /* $orange hover */
+  color: #000;
+  transform: scale(1.05);
+  text-transform: uppercase;
+}
+
+/* Active nav link */
+.navbar .nav-link.active {
+  font-weight: 700; /* bolder for active page */
+}
+
+/* Dropdown items */
+.dropdown-menu .dropdown-item {
+  border-radius: 2rem;
+  padding: 0.4rem 0.75rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-menu .dropdown-item:hover {
+  background-color: $secondary;
+  color: #000;
+  text-transform: uppercase;
+}
+
 @import "bootstrap/scss/bootstrap.scss";
 @import "bootstrap-icons/font/bootstrap-icons.css";
