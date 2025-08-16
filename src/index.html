@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index,follow" />
     <meta name="description" content="TODO: Portfolio website ..." />
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./stylesheets/main.scss" />
   </head>
   <body>
@@ -14,11 +14,32 @@
       <div class="container-fluid bg-dark" height="100%">
         <div class="px-5">
           <h1 class="display-1 fw-bolder landing-title text-primary mb-1">Natalie Chesley</h1>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            id="Layer_2"
+            data-name="Layer 2"
+            viewBox="0 0 819.45 118.94"
+            width="50%"
+          >
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: #1fb6d4;
+                }
+              </style>
+            </defs>
+            <g id="Layer_1-2" data-name="Layer 1">
+              <path
+                class="cls-1"
+                d="M811.23,51.2c-20.57,14.08-41.26,27.12-64.64,36.11-23.28,8.95-47.84,14.69-72.59,17.57-52.2,6.07-104.86,.54-155.87-11.22C404.12,67.38,296.82,13.88,179.45,2.2,118.5-3.87,56.09,1.77,.87,29.82c-1.96,1-.24,3.78,1.7,2.91C108.82-14.74,229.4,10.4,335.08,45.78c106.22,35.55,213.5,80.89,327.91,72.05,28.06-2.17,56.02-7.39,82.58-16.83,25.95-9.22,52.12-22.15,72.31-41.18,4.45-4.19-1.44-12.18-6.65-8.61Z"
+              />
+            </g>
+          </svg>
 
           <h2 class="display-3 text-info fw-bold mt-0">Online Resume and Portfolio</h2>
           <div class="d-grid gap-4 d-sm-flex justify-content-sm-start mb-5">
             <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">DOWNLOAD RESUME</button>
-            <button type="button" class="btn btn-outline-secondary btn-lg px-4">ABOUT ME</button>
+            <button type="button" href="#about" class="btn btn-outline-secondary btn-lg px-4">ABOUT ME</button>
           </div>
         </div>
 
@@ -29,36 +50,32 @@
         </div>
       </div>
 
-      <nav class="navbar navbar-expand-lg bg-primary sticky-top">
+      <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container-fluid">
           <a class="navbar-brand text-white" href="index.html">
             <img
               src="./images/thefishnmama.svg"
               alt="Logo"
               width="120"
-              height="96"
+              height="98"
               class="d-inline-block align-text-top"
             />
           </a>
-
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
             <span class="navbar-toggler-icon"></span>
           </button>
-
           <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link text-white active" aria-current="page" href="index.html">Home</a>
               </li>
-
               <li class="nav-item">
-                <a class="nav-link text-white" href="about.html">About</a>
+                <a class="nav-link text-white" href="#about">About</a>
               </li>
-
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle text-white"
-                  href="#"
+                  href="portfolio/index.html"
                   id="portfolioDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -66,15 +83,14 @@
                   Portfolio
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="project1.html">Project 1</a></li>
-                  <li><a class="dropdown-item" href="project2.html">Project 2</a></li>
-                  <li><a class="dropdown-item" href="project3.html">Project 3</a></li>
-                  <li><a class="dropdown-item" href="project4.html">Project 4</a></li>
-                  <li><a class="dropdown-item" href="project5.html">Project 5</a></li>
-                  <li><a class="dropdown-item" href="project6.html">Project 6</a></li>
+                  <li><a class="dropdown-item" href="portfolio/project1.html">Project 1</a></li>
+                  <li><a class="dropdown-item" href="portfolio/project2.html">Project 2</a></li>
+                  <li><a class="dropdown-item" href="portfolio/project3.html">Project 3</a></li>
+                  <li><a class="dropdown-item" href="portfolio/project4.html">Project 4</a></li>
+                  <li><a class="dropdown-item" href="portfolio/project5.html">Project 5</a></li>
+                  <li><a class="dropdown-item" href="portfolio/project6.html">Project 6</a></li>
                 </ul>
               </li>
-
               <li class="nav-item">
                 <a class="nav-link text-white" href="contact.html">Contact</a>
               </li>
@@ -83,11 +99,137 @@
         </div>
       </nav>
     </section>
-    <section>
-      <div class="container-fluid py-5 bg-info">
-        <div class="container shadow bg-white mb-5 p-4 d-flex justify-content-center w-50">
+
+    <section class="bg-info position-relative about" id="about">
+      <div class="container text-center">
+        <div class="shadow bg-white mb-5 p-4 w-50 mx-auto">
           <img src="./images/BeachBoat.svg" alt="Beach boat" class="img-fluid" />
         </div>
+
+        <h3 class="text-center text-dark text-uppercase mb-5">About Me</h3>
+
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-3 text-md-end text-center mb-4 mb-md-0">
+            <div class="mb-3">
+              <h4>Full Name</h4>
+              <p>Natalie Johnson Chesley</p>
+            </div>
+            <div class="mb-3">
+              <h4>Birth Place</h4>
+              <p>Ogden, Utah</p>
+            </div>
+            <div class="mb-3">
+              <h4>Lifelong Learner</h4>
+              <p>Forever chasing new skills just for the fun of learning</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4 mb-md-0">
+            <div id="smallCarousel" class="carousel slide carousel-fade" data-bs-interval="false">
+              <div class="carousel-inner">
+                <div class="carousel-item active shadow">
+                  <div class="carousel-box d-flex justify-content-center align-items-center">
+                    <img
+                      src="./images/1774CA88-2762-4B3E-9CB2-5829542CD814_1_105_c.jpeg"
+                      class="rounded-circle shadow carousel-img"
+                      alt="image 1"
+                    />
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-box d-flex justify-content-center align-items-center">
+                    <img
+                      src="./images/3E163D1D-BD41-4554-B0FD-B3BF61994D8A_1_105_c.jpeg"
+                      class="rounded-circle shadow carousel-img"
+                      alt="image 2"
+                    />
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-box d-flex justify-content-center align-items-center">
+                    <img
+                      src="./images/75F0B35A-9370-49EB-AD74-9BC2DD12E52D_1_105_c.jpeg"
+                      class="rounded-circle shadow carousel-img"
+                      alt="image 3"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#smallCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#smallCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#smallCarousel" data-bs-slide-to="2"></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Text -->
+          <div class="col-md-3 text-md-start text-center mb-4 mb-md-0">
+            <div class="mb-3">
+              <h4>Current City</h4>
+              <p>Ogden, Utah</p>
+            </div>
+            <div class="mb-3">
+              <h4>Family</h4>
+              <p>Husband & 5 daughters</p>
+            </div>
+            <div class="mb-3">
+              <h4>Hobbies</h4>
+              <p>Building Legos, Crafting, Playing Piano, Family Time, Camping, and Fishing</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col text-center">
+            <h4>Personal Motto</h4>
+            <p>"Progress over Perfection."</p>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col text-center">
+            <h3 class="text-secondary fw-bold">Dare to be Different! Be Bold or Italic, but Never Regular!</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="position-relative">
+      <div class="container bg-secondary w-75 rounded shadow floating-container">
+        <h3 class="text-white text-center p-4">In my free time, I enjoy...</h3>
+        <div class="row">
+          <div class="col-md-4 d-flex align-items-start mb-3">
+            <i class="bi bi-music-note-beamed text-white fs-1 me-3"></i>
+            <div>
+              <h4 class="text-white">Music</h4>
+              <p class="text-white">I love listening, singing, and playing music. I play the piano.</p>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex align-items-start mb-3">
+            <img src="./images/fishy.svg" alt="Fish hook" width="50" height="50" class="me-3" />
+            <div>
+              <h4 class="text-white">Fishing</h4>
+              <p class="text-white">I love relaxing on the shore of a beautiful lake trying to catch some trout.</p>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex align-items-start mb-3">
+            <img src="./images/creative.svg" alt="Mountain lightbulb" width="50" height="50" class="me-3" />
+            <div>
+              <h4 class="text-white">Creativity</h4>
+              <p class="text-white">
+                I love to create new projects and learn new tools and techniques of making things.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-fluid position-absolute">
+      <div class="bg-success py-5 floating-wrapper">
+        <h3 class="text-white text-center skills">Skills & Education</h3>
       </div>
     </section>
 
