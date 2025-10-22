@@ -10,56 +10,58 @@
     <link rel="stylesheet" href="./stylesheets/main.scss" />
   </head>
   <body>
-   <nav class="navbar navbar-expand-lg bg-primary fixed-top">
-  <div class="container-fluid">
-    
-    <a class="navbar-brand text-white" href="index.html">
-      <img
-              src="../images/thefishnmama.svg"
-              alt="Logo"
-              width="120"
-              height="98"
-              class="d-inline-block align-text-top"
-            />
-    </a>
+    <nav class="navbar navbar-expand-lg bg-primary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="../index.html">
+          <!-- ← go up one level to root -->
+          <img
+            src="../images/thefishnmama.svg"
+            alt="Logo"
+            width="120"
+            height="98"
+            class="d-inline-block align-text-top"
+          />
+        </a>
 
-   
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link text-white active" aria-current="page" href="./index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="../about.html">About</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white" href="portfolio/index.html" id="portfolioDropdown" role="button" data-bs-toggle="dropdown">
-            Portfolio
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="portfolio/project1.html">Project 1</a></li>
-            <li><a class="dropdown-item" href="portfolio/project2.html">Project 2</a></li>
-            <li><a class="dropdown-item" href="portfolio/project3.html">Project 3</a></li>
-            <li><a class="dropdown-item" href="portfolio/project4.html">Project 4</a></li>
-            <li><a class="dropdown-item" href="portfolio/project5.html">Project 5</a></li>
-            <li><a class="dropdown-item" href="portfolio/project6.html">Project 6</a></li>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-white active" aria-current="page" href="../index.html">Home</a>
+              <!-- ← go up one level -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="../about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-white"
+                href="#"
+                id="portfolioDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Portfolio
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="project1.html">Project 1</a></li>
+                <li><a class="dropdown-item" href="project2.html">Project 2</a></li>
+                <li><a class="dropdown-item" href="project3.html">Project 3</a></li>
+                <li><a class="dropdown-item" href="project4.html">Project 4</a></li>
+                <li><a class="dropdown-item" href="project5.html">Project 5</a></li>
+                <li><a class="dropdown-item" href="project6.html">Project 6</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="../contact.html">Contact</a>
+            </li>
           </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="contact.html">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-    </section>
-
-    <script type="module" src="../javascripts/main.js"></script>
+        </div>
+      </div>
+    </nav>
+    <script type="module" src="./javascripts/main.js"></script>
   </body>
 </html>

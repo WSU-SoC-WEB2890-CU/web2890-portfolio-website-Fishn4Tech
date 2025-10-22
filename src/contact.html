@@ -12,10 +12,10 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-primary fixed-top">
       <div class="container-fluid">
-        <!-- Brand Logo -->
-        <a class="navbar-brand text-white" href="index.html">
+        <a class="navbar-brand text-white" href="../index.html">
+          <!-- ← go up one level to root -->
           <img
-            src="./images/thefishnmama.svg"
+            src="../images/thefishnmama.svg"
             alt="Logo"
             width="120"
             height="98"
@@ -23,24 +23,23 @@
           />
         </a>
 
-        <!-- Mobile toggle button -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Nav links -->
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link text-white active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link text-white active" aria-current="page" href="../index.html">Home</a>
+              <!-- ← go up one level -->
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="about.html">About</a>
+              <a class="nav-link text-white" href="../about.html">About</a>
             </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle text-white"
-                href="portfolio/index.html"
+                href="#"
                 id="portfolioDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -48,22 +47,98 @@
                 Portfolio
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="portfolio/project1.html">Project 1</a></li>
-                <li><a class="dropdown-item" href="portfolio/project2.html">Project 2</a></li>
-                <li><a class="dropdown-item" href="portfolio/project3.html">Project 3</a></li>
-                <li><a class="dropdown-item" href="portfolio/project4.html">Project 4</a></li>
-                <li><a class="dropdown-item" href="portfolio/project5.html">Project 5</a></li>
-                <li><a class="dropdown-item" href="portfolio/project6.html">Project 6</a></li>
+                <li><a class="dropdown-item" href="project1.html">Project 1</a></li>
+                <li><a class="dropdown-item" href="project2.html">Project 2</a></li>
+                <li><a class="dropdown-item" href="project3.html">Project 3</a></li>
+                <li><a class="dropdown-item" href="project4.html">Project 4</a></li>
+                <li><a class="dropdown-item" href="project5.html">Project 5</a></li>
+                <li><a class="dropdown-item" href="project6.html">Project 6</a></li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="contact.html">Contact</a>
+              <a class="nav-link text-white" href="../contact.html">Contact</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    
+  <body class="bg-light">
+
+    <div class="container py-5">
+      <h2 class="text-center mb-4">Contact Me</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Your Name" />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Your Email" />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+          </form>
+
+          <div class="mt-4 text-center">
+            <p>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
+            <p>Phone: (123) 456-7890</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Bootstrap form validation
+      (function () {
+        const form = document.getElementById("contactForm");
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault(); // stop form from submitting
+          if (!form.checkValidity()) {
+            event.stopPropagation();
+          } else {
+            alert("Thanks! Your message is ready to be sent.");
+            form.reset();
+          }
+          form.classList.add("was-validated");
+        });
+      })();
+    </script>
 
     <script type="module" src="./javascripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      // Prevent dropdown toggle link from scrolling to top
+      document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
+        toggle.addEventListener("click", function (e) {
+          e.preventDefault() // <-- stops default anchor jump
+        })
+      })
+    </script>
+    <script>
+      // Make all dropdowns open on hover
+      document.querySelectorAll(".dropdown").forEach((drop) => {
+        const toggle = drop.querySelector(".dropdown-toggle")
+        const menu = drop.querySelector(".dropdown-menu")
+
+        drop.addEventListener("mouseenter", () => {
+          const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(toggle)
+          bsDropdown.show()
+        })
+
+        drop.addEventListener("mouseleave", () => {
+          const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(toggle)
+          bsDropdown.hide()
+        })
+      })
+    </script>
   </body>
 </html>

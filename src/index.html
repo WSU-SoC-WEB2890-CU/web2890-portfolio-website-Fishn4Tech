@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./stylesheets/main.scss" />
   </head>
-  <body>
+  <body id="root">
     <section>
       <div class="container-fluid bg-dark" height="100%">
         <div class="px-5">
@@ -38,16 +38,24 @@
 
           <h2 class="display-3 text-info fw-bold mt-0">Online Resume and Portfolio</h2>
           <div class="d-grid gap-4 d-sm-flex justify-content-sm-start mb-5">
-            <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">DOWNLOAD RESUME</button>
-            <button type="button" href="#about" class="btn btn-outline-secondary btn-lg px-4">ABOUT ME</button>
+            <a
+              href="./assets/Natalie_Chesley_UX_Intern.pdf"
+              target="_blank"
+              class="btn btn-primary btn-lg px-4 me-sm-3"
+            >
+              VIEW RESUME
+            </a>
+            <a href="#new-projects" class="btn btn-outline-secondary btn-lg mx-2">Recent Projects</a>
+            <a href="#older-projects" class="btn btn-info btn-lg mx-2">Older Projects</a>
+            <a href="#about" class="btn btn-outline-secondary btn-lg px-4">ABOUT ME</a>
           </div>
+          <div class="d-flex justify-content-center my-4"></div>
         </div>
 
-        <div class="px-5 d-flex align-items-end">
+        <div class="mt-6 px-5 d-flex align-items-end">
           <img src="./images/Asset 1.svg" class="img-fluid mb-4" alt="Landing page" width="700" height="400" />
 
-          <img src="./images/ui:ux 2-03.svg" class="img-fluid mb-4" alt="User experience" width="300" height="400" />
-        </div>
+          
       </div>
 
       <nav class="navbar navbar-expand-lg bg-primary">
@@ -75,7 +83,7 @@
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle text-white"
-                  href="portfolio/index.html"
+                  href="#"
                   id="portfolioDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -102,10 +110,6 @@
 
     <section class="bg-info position-relative about" id="about">
       <div class="container text-center">
-        <div class="shadow bg-white mb-5 p-4 w-50 mx-auto">
-          <img src="./images/BeachBoat.svg" alt="Beach boat" class="img-fluid" />
-        </div>
-
         <h3 class="text-center text-dark text-uppercase mb-5">About Me</h3>
 
         <div class="row align-items-center justify-content-center">
@@ -230,9 +234,117 @@
     <section class="container-fluid position-absolute">
       <div class="bg-success py-5 floating-wrapper">
         <h3 class="text-white text-center skills">Skills & Education</h3>
+        <p>Coming soon. Please refer resume.</p>
+      </div>
+    </section>
+
+    <section id="new-projects" class="container py-5">
+      <h2 class="text-center mb-5">Recent Projects</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card shadow h-100">
+            <img src="images/Home1.png" class="card-img-top" alt="Project 1" />
+            <div class="card-body">
+              <h5 class="card-title">Full Design Project for Photography business</h5>
+              <p class="card-text">Create website design and implemention.</p>
+              <a href="project1.html" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card shadow h-100">
+            <img src="images/EpisteamApp.png" class="card-img-top" alt="Project 2" />
+            <div class="card-body">
+              <h5 class="card-title">Website to Mobile App Design</h5>
+              <p class="card-text">Complete design analysis inluding redesign, prototype and mockups.</p>
+              <a href="project2.html" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card shadow h-100">
+            <img src="images/EducatorsWireframe.png" class="card-img-top" alt="Project 3" />
+            <div class="card-body">
+              <h5 class="card-title">Redesign Suggestions</h5>
+              <p class="card-text">Website information and content redesign.</p>
+              <a href="project3.html" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="older-projects" class="container py-5">
+      <h2 class="text-center mb-5">Older Projects</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card shadow h-100">
+            <img src="images/BeachBoat.svg" class="card-img-top" alt="Project 1" />
+            <div class="card-body">
+              <h5 class="card-title">Website and Vector Illustrations Design</h5>
+              <p class="card-text">
+                Website design for a travel company. Design was required to incorporate my own vector images.
+              </p>
+              <a href="project1.html" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card shadow h-100">
+            <img src="images/GreenLantern.png" class="card-img-top img-fluid h-50" alt="GreenLanternVectorImage" />
+            <div class="card-body">
+              <h5 class="card-title">Character and Memory Box</h5>
+              <p class="card-text">
+                Trace and color Marvel Character in Illustrator to compile with other students into a memory game box.
+              </p>
+              <a href="project2.html" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card shadow h-100">
+            <img src="images/IceFishingBlonde.jpg" class="card-img-top" alt="Project 3" />
+            <div class="card-body">
+              <h5 class="card-title">Coloring Art</h5>
+              <p class="card-text">Hand drawn art illustration scanned into Illustrator and colored into a digital file.</p>
+              <a href="project3.html" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <script type="module" src="./javascripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      // Prevent dropdown toggle link from scrolling to top
+      document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
+        toggle.addEventListener("click", function (e) {
+          e.preventDefault() // <-- stops default anchor jump
+        })
+      })
+    </script>
+    <script>
+      // Make all dropdowns open on hover
+      document.querySelectorAll(".dropdown").forEach((drop) => {
+        const toggle = drop.querySelector(".dropdown-toggle")
+        const menu = drop.querySelector(".dropdown-menu")
+
+        drop.addEventListener("mouseenter", () => {
+          const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(toggle)
+          bsDropdown.show()
+        })
+
+        drop.addEventListener("mouseleave", () => {
+          const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(toggle)
+          bsDropdown.hide()
+        })
+      })
+    </script>
   </body>
 </html>
