@@ -59,6 +59,52 @@
       </div>
     </nav>
 
-    <script type="module" src="./javascripts/main.js"></script>
+    <script>
+      // Bootstrap form validation
+      ;(function () {
+        const form = document.getElementById("contactForm")
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault() // stop form from submitting
+          if (!form.checkValidity()) {
+            event.stopPropagation()
+          } else {
+            alert("Thanks! Your message is ready to be sent.")
+            form.reset()
+          }
+          form.classList.add("was-validated")
+        })
+      })()
+    </script>
+
+    <script type="module" src="./javascripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      // Prevent dropdown toggle link from scrolling to top
+      document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
+        toggle.addEventListener("click", function (e) {
+          e.preventDefault() // <-- stops default anchor jump
+        })
+      })
+    </script>
+    <script>
+      // Make all dropdowns open on hover
+      document.querySelectorAll(".dropdown").forEach((drop) => {
+        const toggle = drop.querySelector(".dropdown-toggle")
+        const menu = drop.querySelector(".dropdown-menu")
+
+        drop.addEventListener("mouseenter", () => {
+          const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(toggle)
+          bsDropdown.show()
+        })
+
+        drop.addEventListener("mouseleave", () => {
+          const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(toggle)
+          bsDropdown.hide()
+        })
+      })
+    </script>
   </body>
 </html>
