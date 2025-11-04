@@ -1,3 +1,181 @@
-/* Your styles go here */
+$primary: #1fb6d4;
+$secondary: #ffa69e;
+$success: #0e739b;
+$warning: #ff402f;
+$danger: #5a606b;
+$info: #fbf1ec;
+$dark: #344055;
+$light: white;
+
+:root {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Montserrat", "Karla", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+  }
+  h5,
+  h6 {
+    font-family: var(--font-montserrat);
+  }
+}
+
+.landing-title {
+  font-family: "Playfair Display", serif;
+  font-weight: bolder;
+  text-shadow: 1px 1px 0 $dark, -1px -1px 2px $light, 1px -1px 0 $light, -1px 1px 2px $dark;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.navbar {
+  height: 10vh;
+}
+.navbar .nav-link {
+  color: #fff;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.navbar .nav-link:hover {
+  background-color: $secondary;
+  color: $dark;
+  transform: scale(1.05);
+  text-transform: uppercase;
+}
+
+.navbar .nav-link.active {
+  font-weight: 700;
+}
+
+.dropdown-menu .dropdown-item {
+  border-radius: 2rem;
+  padding: 0.4rem 0.75rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: $secondary;
+  color: $dark;
+  text-transform: uppercase;
+}
+
+.carousel-box {
+  width: 300px;
+  height: 300px;
+  background-color: $primary;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+  overflow: hidden;
+}
+
+.carousel-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: opacity 0.5s ease;
+}
+
+#smallCarousel .carousel-indicators {
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  transform: translateY(-50%);
+  flex-direction: column;
+  z-index: 5;
+}
+
+#smallCarousel .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 5px 0;
+  background-color: $dark; /* visible dark color */
+  border: none;
+}
+
+#smallCarousel .carousel-indicators .active {
+  background-color: $success; /* visible active */
+}
+
+#smallCarousel .carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.carousel-indicators .active {
+  color: $primary;
+}
+
+.carousel-fade .carousel-item {
+  transition: opacity 0.7s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .carousel-box {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.about {
+  padding-bottom: 200px !important;
+}
+
+.floating-wrapper {
+  position: relative;
+  margin-top: -100px;
+  z-index: 10;
+}
+
+.floating-container {
+  position: relative;
+  margin-top: -150px;
+  z-index: 10;
+}
+
+.bg-success {
+  position: relative;
+  z-index: 1;
+  padding-top: 4rem;
+}
+
+@media (max-width: 768px) {
+  .floating-container {
+    width: 90% !important;
+    margin-top: -30px;
+    padding: 1.5rem;
+  }
+
+  .floating-container .row > .col-md-4 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.skills {
+  padding-top: 150px;
+}
+#new-projects {
+  margin-top: 250px;
+}
+
 @import "bootstrap/scss/bootstrap.scss";
 @import "bootstrap-icons/font/bootstrap-icons.css";
